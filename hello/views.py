@@ -31,7 +31,7 @@ def get_vix_value():
       #      break
 
      #Return VIX value based on close
-    return df.iloc[1][3];
+    return ("success - VIX");
 
 def index(request):
     print ("Inside Index  - Hello World");    
