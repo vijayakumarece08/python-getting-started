@@ -20,18 +20,18 @@ def get_vix_value():
     print ("Inside Vix  - Hello World");
     # Assume yesterday as today
     yesterday = date.today();
-    while True:
+    #while True:
         # Get yesterday date as we are going to run this before market hours
-        yesterday = yesterday;
+        #yesterday = yesterday;
 
         # Get VIX value of yesterday
         df = pd.DataFrame(nsepy.get_history(symbol="INDIAVIX", start=yesterday, end=yesterday, index=True));
         # IF no data found on yesterday, go back to previous day because it may be weekend
-        if (df.empty == False):
-            break
+     #   if (df.empty == False):
+      #      break
 
-    # Return VIX value based on close
-    print( df.iloc[1][3]);
+     #Return VIX value based on close
+    return df.iloc[0][0];
 
 def index(request):
     print ("Inside Index  - Hello World");    
