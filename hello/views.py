@@ -31,15 +31,15 @@ def get_vix_value():
             break
 
     # Return VIX value based on close
-    return df.iloc[1][3]
+    print( df.iloc[1][3]);
 
 def index(request):
-    print ("Inside Index  - Hello World");
-    get_vix_value();
+    print ("Inside Index  - Hello World");    
     r = requests.get('http://httpbin.org/status/418')
     print(r.text)
     return HttpResponse('<pre>' + r.text + '</pre>')
 
+get_vix_value();
 
 def db(request):
 
