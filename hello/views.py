@@ -17,7 +17,7 @@ print ("Inside Views - Hello World");
 
     # Get VIX value using NSEPy Package
 def get_vix_value():
-print ("Inside Vix  - Hello World");
+    print ("Inside Vix  - Hello World");
     # Assume yesterday as today
     yesterday = date.today();
     while True:
