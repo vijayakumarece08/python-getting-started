@@ -25,7 +25,7 @@ def get_vix_value():
         #yesterday = yesterday;
 
         # Get VIX value of yesterday
-        df = pd.DataFrame(nsepy.get_history(symbol="INDIAVIX", start=yesterday, end=yesterday, index=True));
+    df = pd.DataFrame(nsepy.get_history(symbol="INDIAVIX", start=yesterday, end=yesterday, index=True));
         # IF no data found on yesterday, go back to previous day because it may be weekend
      #   if (df.empty == False):
       #      break
