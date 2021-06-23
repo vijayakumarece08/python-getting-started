@@ -32,7 +32,7 @@ def get_vix_value():
 
      #Return VIX value based on close
     print (df);
-    return ("success - VIX");
+    return ("success - VIX - Option Selling");
 
 def index(request):
     print ("Inside Index  - Hello World");    
