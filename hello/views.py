@@ -17,6 +17,7 @@ print ("Inside Views - Hello World");
 
     # Get VIX value using NSEPy Package
 def get_vix_value():
+    pd.set_option("display.max_rows", None, "display.max_columns", None);
     print ("Inside Vix  - Hello World");
     # Assume yesterday as today
     yesterday = date.today();
@@ -26,6 +27,8 @@ def get_vix_value():
 
         # Get VIX value of yesterday
     df = pd.DataFrame(nsepy.get_history(symbol="INDIAVIX", start=date(2015,1,1), end=date(2015,1,10), index=True));
+    df;
+    print ("after");
         # IF no data found on yesterday, go back to previous day because it may be weekend
      #   if (df.empty == False):
       #      break
