@@ -31,13 +31,14 @@ def get_vix_value():
       #      break
 
      #Return VIX value based on close
+    print (df);
     return ("success - VIX");
 
 def index(request):
     print ("Inside Index  - Hello World");    
     r = requests.get('http://httpbin.org/status/418')
     print(r.text)
-    return HttpResponse('<pre>' + r.text + '</pre>')
+    return HttpResponse('<pre>' + r.text + "I love my dear Nagalakshmi" '</pre>')
 
 print (get_vix_value());
 
