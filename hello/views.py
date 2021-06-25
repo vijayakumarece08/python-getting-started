@@ -39,7 +39,7 @@ def get_vix_value():
 
 def index(request):
     print ("Inside Index  - Hello World");    
-    print(r.text)
+    
     from nsetools import Nse
     nse = Nse()
     inde = nse.get_index_list()
@@ -49,6 +49,7 @@ def index(request):
     print (inde);
     print (q);
     r = requests.get('http://httpbin.org/status/418')
+    print(r.text)
     return HttpResponse('<pre>' + r.text + "........ I love my dear Nagalakshmi......." +'</pre>')
 
 print (get_vix_value());
