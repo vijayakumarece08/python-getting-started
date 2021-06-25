@@ -43,7 +43,8 @@ def index(request):
     print(r.text)
     from nsetools import Nse
     nse = Nse()
-    print nse
+    print (nse);
+    q = nse.get_quote('infy')
     return HttpResponse('<pre>' + r.text + "........ I love my dear Nagalakshmi......." +'</pre>')
 
 print (get_vix_value());
