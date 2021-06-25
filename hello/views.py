@@ -42,11 +42,11 @@ def index(request):
     
     from nsetools import Nse
     nse = Nse()
-    #inde = nse.get_index_list()
+    inde = nse.get_index_list()
     
     #q = nse.get_quote('infy')
     print (nse)
-    #print (inde);
+    print (inde)
     #print (q);
     r = requests.get('http://httpbin.org/status/418')
     print(r.text)
