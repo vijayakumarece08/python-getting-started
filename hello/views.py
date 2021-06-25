@@ -13,10 +13,27 @@ import pandas as pd
  #   return render(request, "index.html")
 
 print ("Inside Views - Hello World");
-from nsetools import Nse
-nse = Nse()
-inde = nse.get_index_list()
-print (inde)
+
+
+#from kiteconnect import KiteConnect
+#import os
+#import datetime as dt
+#import pandas as pd
+
+#cwd = os.chdir("C:/Users/hozef/OneDrive/Desktop/New Logic")
+
+#generate trading session
+#access_token = open("access_token.txt",'r').read()
+#key_secret = open("api_key.txt",'r').read().split()
+#kite = KiteConnect(api_key=key_secret[0])
+#kite.set_access_token(access_token)
+
+
+#get dump of all NSE instruments
+#instrument_dump = kite.instruments("NSE")
+#instrument_df = pd.DataFrame(instrument_dump)
+#print (instrument_df)
+
 
 
     # Get VIX value using NSEPy Package
