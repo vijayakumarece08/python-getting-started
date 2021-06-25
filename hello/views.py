@@ -63,12 +63,12 @@ def get_vix_value():
 def index(request):
     print ("Inside Index  - Hello World");    
     
-    from nsetools import Nse
-    nse = Nse()
+    from nsetools import nse
+    #nse = Nse()
     
     
-    #q = nse.get_quote('infy')
-    print (nse)
+    q = nse.get_quote('infy')
+    print (q)
     #print (inde)
     #print (q);
     r = requests.get('http://httpbin.org/status/418')
