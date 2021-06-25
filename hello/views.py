@@ -13,12 +13,18 @@ import pandas as pd
  #   return render(request, "index.html")
 
 print ("Inside Views - Hello World");
+from nsetools import Nse
+nse = Nse()
+inde = nse.get_index_list()
+print (inde)
 
 
     # Get VIX value using NSEPy Package
 def get_vix_value():
     #pd.set_option("display.max_rows", None, "display.max_columns", None);
     print ("Inside Vix  - Hello World");
+    
+
     # Assume yesterday as today
     yesterday = date.today();
     #while True:
@@ -42,11 +48,11 @@ def index(request):
     
     from nsetools import Nse
     nse = Nse()
-    inde = nse.get_index_list()
+    
     
     #q = nse.get_quote('infy')
     print (nse)
-    print (inde)
+    #print (inde)
     #print (q);
     r = requests.get('http://httpbin.org/status/418')
     print(r.text)
