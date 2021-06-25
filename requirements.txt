@@ -9,3 +9,4 @@ pytz
 setuptools
 whitenoise
 pandas
+nsetools
