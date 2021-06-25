@@ -52,7 +52,7 @@ def index(request):
     print(r.text)
     return HttpResponse('<pre>' + r.text + "........ I love my dear Nagalakshmi......." +'</pre>')
 
-print (get_vix_value());
+#print (get_vix_value());
 
 def db(request):
 
