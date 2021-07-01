@@ -10,3 +10,4 @@ setuptools
 whitenoise
 pandas
 nsetools
+py5paisa
