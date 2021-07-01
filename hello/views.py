@@ -70,6 +70,19 @@ def index(request):
             {"Exch":"N","ExchType":"D","Symbol":"NIFTY 22 APR 2021 PE 15200.00","Expiry":"20210422","StrikePrice":"15200","OptionType":"PE"}]
 
     client.fetch_market_feed(req_list_)
+    print(client.fetch_market_feed(req_list_))
+    
+    # Fetches holdings
+    print(client.holdings())
+
+    # Fetches margin
+    client.margin()
+
+    # Fetches positions
+    client.positions()
+
+    # Fetches the order book of the client
+    print(client.order_book())
 
     r = requests.get('http://httpbin.org/status/418')
     print(r.text)
