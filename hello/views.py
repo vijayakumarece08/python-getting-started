@@ -66,8 +66,8 @@ def index(request):
     from py5paisa import FivePaisaClient
     client = FivePaisaClient(email="lakshmifemina7@gmail.com", passwd="Vinayakk@123", dob="19920710")
     client.login()
-    req_list_=[{"Exch":"N","ExchType":"D","Symbol":"NIFTY 22 APR 2021 CE 15200.00","Expiry":"20210422","StrikePrice":"15200","OptionType":"CE"},
-            {"Exch":"N","ExchType":"D","Symbol":"NIFTY 22 APR 2021 PE 15200.00","Expiry":"20210422","StrikePrice":"15200","OptionType":"PE"}]
+    req_list_=[{"Exch":"N","ExchType":"D","Symbol":"NIFTY 29 JUL 2021 CE 15200.00","Expiry":"20210729","StrikePrice":"15200","OptionType":"CE"},
+            {"Exch":"N","ExchType":"D","Symbol":"NIFTY 29 JUL 2021 PE 15200.00","Expiry":"20210729","StrikePrice":"15200","OptionType":"PE"}]
 
     client.fetch_market_feed(req_list_)
     print(client.fetch_market_feed(req_list_))
