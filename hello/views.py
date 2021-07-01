@@ -83,10 +83,14 @@ def index(request):
 
     # Fetches the order book of the client
     print(client.order_book())
-
+    
+    from py5paisa.order import Order, OrderType, Exchange
+    test_order = Order(order_type='B',exchange='N',exchange_segment='C', scrip_code=1660, quantity=1, price=205,is_intraday=True,atmarket=False)
+    print(client.place_order(test_order))
+    
     r = requests.get('http://httpbin.org/status/418')
     print(r.text)
-    return HttpResponse('<pre>' + r.text + "........ I love my dear Nagalakshmi......." +'</pre>')
+    return HttpResponse('<pre>' + r.text + ".........."+ (client.place_order(test_order)) +"........ I love my dear Nagalakshmi......." +'</pre>')
 
 #print (get_vix_value());
 
