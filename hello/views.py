@@ -69,9 +69,10 @@ def index(request):
     req_list_=[{"Exch":"N","ExchType":"D","Symbol":"NIFTY 29 JUL 2021 CE 15200.00","Expiry":"20210729","StrikePrice":"15200","OptionType":"CE"},
             {"Exch":"N","ExchType":"D","Symbol":"NIFTY 29 JUL 2021 PE 15200.00","Expiry":"20210729","StrikePrice":"15200","OptionType":"PE"}]
 
-    client.fetch_market_feed(req_list_)
+    dict1 = client.fetch_market_feed(req_list_)
     print(client.fetch_market_feed(req_list_))
     
+    client.Streming_data(dict1)
     # Fetches holdings
     print(client.holdings())
 
