@@ -6,6 +6,7 @@ import requests
 import nsepy
 from datetime import date
 import pandas as pd
+from py5paisa.strategy import *
 
 # Create your views here.
 #def index(request):
@@ -90,7 +91,7 @@ def index(request):
     test_order = Order(order_type='B',exchange='N',exchange_segment='C', scrip_code=1660, quantity=1, price=205,is_intraday=True,atmarket=False)
     print(client.place_order(test_order))
     
-    from py5paisa.strategy import *
+    
     strategy=strategies()
     strategy.short_straddle("banknifty",'37000','50','20210610','I')
     
