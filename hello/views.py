@@ -69,9 +69,10 @@ def index(request):
     req_list_=[{"Exch":"N","ExchType":"D","Symbol":"NIFTY 29 JUL 2021 CE 15200.00","Expiry":"20210729","StrikePrice":"15200","OptionType":"CE"},
             {"Exch":"N","ExchType":"D","Symbol":"NIFTY 29 JUL 2021 PE 15200.00","Expiry":"20210729","StrikePrice":"15200","OptionType":"PE"}]
 
-    dict1 = client.fetch_market_feed(req_list_)
+    #dict1 = client.fetch_market_feed(req_list_)
     print(client.fetch_market_feed(req_list_))
     
+    dict1=Client.Request_Feed('mf','s',req_list)
     client.Streming_data(dict1)
     # Fetches holdings
     print(client.holdings())
@@ -88,6 +89,10 @@ def index(request):
     from py5paisa.order import Order, OrderType, Exchange
     test_order = Order(order_type='B',exchange='N',exchange_segment='C', scrip_code=1660, quantity=1, price=205,is_intraday=True,atmarket=False)
     print(client.place_order(test_order))
+    
+    from py5paisa.strategy import *
+    strategy=strategies()
+    strategy.short_straddle("banknifty",'37000','50','20210610','I')
     
     r = requests.get('http://httpbin.org/status/418')
     print(r.text)
