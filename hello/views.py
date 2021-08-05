@@ -97,7 +97,7 @@ def index(request):
     
     r = requests.get('http://httpbin.org/status/418')
     print(r.text)
-    return HttpResponse('<pre>' + r.text + ".........." +"........ I love my dear Nagalakshmi......." +'</pre>')
+    return HttpResponse('<pre>' + r.text + ".........." +"........ Hello Nagalakshmi......." +'</pre>')
 
 #print (get_vix_value());
 
