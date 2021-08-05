@@ -85,15 +85,15 @@ def index(request):
     client.positions()
 
     # Fetches the order book of the client
-    print(client.order_book())
+    #print(client.order_book())
     
-    from py5paisa.order import Order, OrderType, Exchange
-    test_order = Order(order_type='B',exchange='N',exchange_segment='C', scrip_code=1660, quantity=1, price=205,is_intraday=True,atmarket=False)
-    print(client.place_order(test_order))
+    #from py5paisa.order import Order, OrderType, Exchange
+    #test_order = Order(order_type='B',exchange='N',exchange_segment='C', scrip_code=1660, quantity=1, price=205,is_intraday=True,atmarket=False)
+    #print(client.place_order(test_order))
     
     
-    strategy=strategies()
-    strategy.short_straddle("banknifty",'37000','50','20210610','I')
+    #strategy=strategies()
+    #strategy.short_straddle("banknifty",'37000','50','20210610','I')
     
     r = requests.get('http://httpbin.org/status/418')
     print(r.text)
